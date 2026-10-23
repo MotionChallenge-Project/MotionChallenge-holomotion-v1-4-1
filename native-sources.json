@@ -1,0 +1,30 @@
+{
+  "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
+  "version": "v1.4.1",
+  "files": {
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/config.py": "3bb0f326aec6fb26c9a7a3819e2cd556ac8d0855936a84b56edbb251fd14bbb5",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/obs_builder/__init__.py": "b3edb683d8833b087d9e384f4eb10ef12c9ab3176cfe8df5b7fe72a22ffedecd",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/obs_builder/obs_builder.py": "10ccbef3e09573f5812171db6d976b7142be314ac442d97574a95b16442e06da",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/observation_evaluator.py": "dabf5015db9bbd3e2e05acf1b3e4cece2b8d8acae6cf38f9b9431e6021cb2bf6",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/offline_motion_reference.py": "432530a9809cfdca52d190f0e5d09c9e718e4c612a59c789d951ec518485f20c",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/onnx_policy.py": "2817613bbe19003e039b415999e1e68d64a8aba0253aaa76955a60170e3a0a20",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/policy_node_29dof.py": "776fe2241f0bad8fe277f3c27fe1b8796165f33b0ba3e5c3c31c17946bdc0ee3",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/policy_runtime.py": "967a2ae9f3e694201f0e9a2fe7d9dbc4926fe4cb0801879925d3f085148f53f1",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/utils/command_helper.py": "a06575599538967d24459645b51ac63aaab498ddb9ee4c268d5fb3b977c9a7df",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/utils/maths.py": "8ef1ccd3ecdadf3ad05d755ff0dd1c131f2b6623adfe4ae225e851be859898b9",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/utils/motor_crc.py": "05e92dcf1a567314b826adf7b5b03f4081fe1e219344b7516b90d177c5960e63",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/utils/remote_controller_filter.py": "30602e351cac424ae355f728de1a5fb2140d5e50f18163ef491b22bed7cf9f06",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/utils/rotation_helper.py": "8790d71d9093d5a939f4ea3cd37d0775817701badd88355fe99539e9d9d9040e",
+    "deployment/unitree_g1_ros2_29dof/src/humanoid_policy/utils/rotations.py": "2a05c3833397fb1db4d5ed72ed430bc443a8b9bb07898a4bab27a4447261e5d6"
+  },
+  "checkpoint_config_sha256": "63bc408717236d70e2394734eeb51187640b7eded9e3d34dff6a649c0aadd66f",
+  "onnx_metadata": {
+    "action_scale": "0.548,0.548,0.548,0.351,0.351,0.439,0.548,0.548,0.439,0.351,0.351,0.439,0.439,0.439,0.439,0.439,0.439,0.439,0.439,0.439,0.439,0.439,0.439,0.439,0.439,0.075,0.075,0.075,0.075",
+    "rope_max_seq_len": "8192",
+    "joint_damping": "2.558,2.558,2.558,6.309,6.309,1.814,2.558,2.558,1.814,6.309,6.309,0.907,0.907,1.814,1.814,0.907,0.907,1.814,1.814,0.907,0.907,0.907,0.907,0.907,0.907,1.068,1.068,1.068,1.068",
+    "joint_stiffness": "40.179,40.179,40.179,99.098,99.098,28.501,40.179,40.179,28.501,99.098,99.098,14.251,14.251,28.501,28.501,14.251,14.251,28.501,28.501,14.251,14.251,14.251,14.251,14.251,14.251,16.778,16.778,16.778,16.778",
+    "default_joint_pos": "-0.312,-0.312,0.000,0.000,0.000,0.000,0.000,0.000,0.100,0.669,0.669,0.200,0.200,-0.363,-0.363,0.200,-0.200,0.000,0.000,0.000,0.000,0.600,0.600,0.000,0.000,0.000,0.000,0.000,0.000",
+    "joint_names": "left_hip_pitch_joint,right_hip_pitch_joint,waist_yaw_joint,left_hip_roll_joint,right_hip_roll_joint,waist_roll_joint,left_hip_yaw_joint,right_hip_yaw_joint,waist_pitch_joint,left_knee_joint,right_knee_joint,left_shoulder_pitch_joint,right_shoulder_pitch_joint,left_ankle_pitch_joint,right_ankle_pitch_joint,left_shoulder_roll_joint,right_shoulder_roll_joint,left_ankle_roll_joint,right_ankle_roll_joint,left_shoulder_yaw_joint,right_shoulder_yaw_joint,left_elbow_joint,right_elbow_joint,left_wrist_roll_joint,right_wrist_roll_joint,left_wrist_pitch_joint,right_wrist_pitch_joint,left_wrist_yaw_joint,right_wrist_yaw_joint"
+  }
+}

@@ -1,4 +1,5 @@
-"""SDK-native HoloMotion v1.4.0: 134 current + 10 x 47 future, recurrent ONNX."""
+"""SDK-native HoloMotion v1.4.1: author observation schema, recurrent ONNX."""
+from dataclasses import replace
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 from motion_challenge.adapters.onnx import ONNXController,yaw
@@ -6,6 +7,11 @@ from motion_challenge.adapters.onnx import ONNXController,yaw
 
 class HoloMotion(ONNXController):
     action_output='actions'
+
+    def __init__(self,root,runtime):
+        super().__init__(root,runtime)
+        if self.session.get_inputs()[0].shape != [1,self.cfg['input_dimension']]:
+            raise ValueError('checkpoint observation dimension differs from author config')
 
     def reset(self,state,reference,seed):
         super().reset(state,reference,seed)
@@ -30,12 +36,17 @@ class HoloMotion(ONNXController):
             [np.sin(heading_error),np.cos(heading_error)],gravity,omega,q-self.default,qd,self.last])
         future=np.concatenate([refq[1:].reshape(-1),positions[1:,2],grav[1:].reshape(-1),linear[1:].reshape(-1),
             angular[1:].reshape(-1),np.stack([np.sin(yaw_deltas),np.cos(yaw_deltas)],axis=-1).reshape(-1),rot6])
-        if self.step>=8128:self.memory.fill(0);self.step=0
+        if self.step>=self.cfg['rope_reset_at']:self.memory.fill(0);self.step=0
         inputs={'obs':np.r_[current,future][None],'past_key_values':self.memory,'step_idx':np.array([self.step],np.int64)}
         self.step+=1
         return inputs
 
     def after_inference(self,result):self.memory=result['present_key_values']
+
+    def act(self,state,reference):
+        command=super().act(state,reference)
+        target=self.default.astype(np.float32)+self.scale.astype(np.float32)*self.last
+        return replace(command,joint_position_target_rad=tuple(float(x) for x in target[self.inverse]))
 
 
 def create(root,runtime):return HoloMotion(root,runtime)

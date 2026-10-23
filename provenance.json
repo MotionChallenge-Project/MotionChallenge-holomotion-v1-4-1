@@ -1,23 +1,24 @@
 {
-  "model": "holomotion",
+  "model": "holomotion-v1-4-1",
   "submitter": "Motion Challenge",
   "submission_type": "maintainer reproduction, not author submission",
   "upstream": "https://github.com/HorizonRobotics/HoloMotion",
-  "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
-  "checkpoint_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
-  "author_inference_review": "pending",
+  "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
+  "checkpoint_sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
+  "author_inference_review": "Passed native observation, recurrent inference, reset and motor-target comparison: 160 cases, 4 resets.",
   "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-  "legacy_results": "not transferable to this adapter revision without rerunning",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
   "checkpoint_origin": {
-    "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/blob/fcb8d4d8e96af9535c2adcc2b53e267019f865a2/README.md",
+    "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/cf2018a282249a04df1db4fa639760884f97b41b",
     "author_release_label": "HorizonRobotics/HoloMotion",
     "kind": "author_file",
     "kind_label": "Author-released checkpoint",
-    "artifact_page_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx",
-    "original_filename": "model_14000.onnx",
+    "artifact_page_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+    "original_filename": "HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
     "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-    "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx",
-    "sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe"
-  }
+    "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+    "sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7"
+  },
+  "display_name": "HoloMotion v1.4.1",
+  "inference_validation": "validation/native-parity.json"
 }
