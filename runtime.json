@@ -58,5 +58,13 @@
   "official": false,
   "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
   "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
-  "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx"
+  "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+  "default_track": "ideal-proprioception",
+  "observation_tracks": {
+    "ideal-proprioception": {
+      "entrypoint": "restricted:create",
+      "admission_record": "admission.json",
+      "admission_sha256": "8a1911f309559bfe6f969cf3975e6dfbc23094c3055f03a3ec2acd439e5a0d6d"
+    }
+  }
 }

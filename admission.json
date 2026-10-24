@@ -1,0 +1,48 @@
+{
+  "schema": "MotionChallenge/observation-admission-v1",
+  "model": "holomotion-v1-4-1",
+  "display_name": "HoloMotion v1.4.1",
+  "state_access": "ideal-proprioceptive-no-position-v1",
+  "status": "inference_verified",
+  "checkpoint_sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
+  "auxiliary_artifacts": {},
+  "checkpoint_origin": {
+    "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/cf2018a282249a04df1db4fa639760884f97b41b",
+    "author_release_label": "HorizonRobotics/HoloMotion",
+    "kind": "author_file",
+    "kind_label": "Author-released checkpoint",
+    "artifact_page_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+    "original_filename": "HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+    "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+    "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+    "sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7"
+  },
+  "author_source": "https://github.com/HorizonRobotics/HoloMotion",
+  "author_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
+  "base_adapter_commit": "a129f01e79c42c62995bb27b139f8009afc6dffb",
+  "production_source_sha256": {
+    "adapter.py": "33ed42c6e931febbba7b0647bc8859c0d23199b843b7b26123dab40844cd7bdf",
+    "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+    "native-sources.json": "50e02e67cb85ee6b18097dbd95304d450c06389c61fa6206ba1c560a08eeaa05",
+    "policy.json": "f308b6eaec451b7ee71ddf14968011a355199f558597340f1f5b6a9542faeff4",
+    "validate_inference.py": "80b399625d5986399f053cb90824e2baf29ea755c428d1b07f5900fea03d1446"
+  },
+  "prior_native_parity_sha256": {
+    "validation/native-parity.json": "6167c3fa092395b1a52a78b3b738bfea9e962f7df3c0340d545d24d5f3778ca2"
+  },
+  "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
+  "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
+  "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
+  "new_evaluation": {
+    "status": "queued",
+    "inherited_scores": false
+  },
+  "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1",
+  "dependency_test": {
+    "path": "validation/observation-access.json",
+    "sha256": "23d8922667c65dc69dab5325c971644465eb9a1ff3d1ca9f26a8658593507287",
+    "code": "validate_observations.py",
+    "cases": 160,
+    "resets": 4
+  }
+}
