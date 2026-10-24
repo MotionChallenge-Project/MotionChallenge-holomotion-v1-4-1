@@ -1,12 +1,12 @@
 {
   "model": "holomotion-v1-4-1",
   "submitter": "MotionChallenge",
-  "submission_type": "maintainer reproduction, not author submission",
+  "submission_type": "MotionChallenge reproduction",
   "upstream": "https://github.com/HorizonRobotics/HoloMotion",
   "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
   "checkpoint_sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
   "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
-  "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+  "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
   "checkpoint_origin": {
     "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/cf2018a282249a04df1db4fa639760884f97b41b",
