@@ -1,6 +1,6 @@
 {
   "model": "holomotion-v1-4-1",
-  "submitter": "Motion Challenge",
+  "submitter": "MotionChallenge",
   "submission_type": "maintainer reproduction, not author submission",
   "upstream": "https://github.com/HorizonRobotics/HoloMotion",
   "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",

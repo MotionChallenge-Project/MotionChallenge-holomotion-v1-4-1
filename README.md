@@ -5,8 +5,8 @@
 ## Install and run
 
 ```bash
-git clone --recurse-submodules https://github.com/MotionChallenge-Project/motion-challenge-holomotion-v1-4-1.git
-cd motion-challenge-holomotion-v1-4-1
+git clone --recurse-submodules https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1.git
+cd MotionChallenge-holomotion-v1-4-1
 uv sync
 uv run evaluate.py
 ```
