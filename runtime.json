@@ -61,6 +61,8 @@
   "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
   "observation_contract": {
     "admission_record": "admission.json",
-    "admission_sha256": "956e208a1ae4e32a8e28b7fbbfb1e222c1366dd7d7833cf699689ea710930718"
-  }
+    "admission_sha256": "7ec7249307e65f4e99d345c9c875d55d606d491a32643efe614c91e0eeff9949"
+  },
+  "batch_entrypoint": "parallel:create",
+  "inference_workers": 4
 }

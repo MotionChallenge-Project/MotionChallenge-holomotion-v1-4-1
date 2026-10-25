@@ -1,0 +1,100 @@
+{
+  "schema": "MotionChallenge/inference-concurrency-v1",
+  "core": "da0aec4023bbc3d29be67e1fce9fa9ab8a48c4b5",
+  "inference": {
+    "model": "holomotion-v1-4-1",
+    "scope": "40 real LAFAN initial states, six advancing reference steps, two independent resets, reordered slots, partial reset; exact original frozen inference comparison",
+    "baseline_adapter": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1/tree/b3bcbc9e18cc17cf3da3204a7390b03cb2afb6a5",
+    "candidate_source_sha256": {
+      "adapter.py": "33ed42c6e931febbba7b0647bc8859c0d23199b843b7b26123dab40844cd7bdf",
+      "parallel.py": "24f5d3b68572d209c8570f8e346ad63b158aac17a86950aebf49c397d2d234fc",
+      "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+      "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+      "validate_inference.py": "80b399625d5986399f053cb90824e2baf29ea755c428d1b07f5900fea03d1446",
+      "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831"
+    },
+    "checkpoint_sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
+    "records": [
+      {
+        "workers": 1,
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.5922890566289425,
+          0.5913925692439079
+        ],
+        "median_40_calls_s": 0.0986401354894042
+      },
+      {
+        "workers": 2,
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.314374215900898,
+          0.3153919652104378
+        ],
+        "median_40_calls_s": 0.05248051509261131
+      },
+      {
+        "workers": 4,
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.19076814875006676,
+          0.19490580633282661
+        ],
+        "median_40_calls_s": 0.03213949625690778
+      },
+      {
+        "workers": 8,
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.20290454477071762,
+          0.20720259472727776
+        ],
+        "median_40_calls_s": 0.03417559495816628
+      },
+      {
+        "workers": 16,
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.20918764173984528,
+          0.19972118362784386
+        ],
+        "median_40_calls_s": 0.03407573544730743
+      },
+      {
+        "workers": 32,
+        "exact": true,
+        "max_abs_delta": 0.0,
+        "seconds_240_calls": [
+          0.2113996557891369,
+          0.2069067433476448
+        ],
+        "median_40_calls_s": 0.03485886659473181
+      }
+    ],
+    "partial_reset_exact": true,
+    "passed": true,
+    "selected_workers": 4,
+    "selected_speedup": 3.0691251256996086
+  },
+  "closed_loop": {
+    "model": "holomotion-v1-4-1",
+    "passed": true,
+    "scope": "all40 clips, first2 seconds, physics feedback, exact pose and metric comparison against frozen formal source",
+    "pose_samples": 4000,
+    "seconds": {
+      "baseline": 22.4120513536036,
+      "candidate": 13.0754419490695
+    },
+    "speedup": 1.7140568893121453,
+    "workers": 4,
+    "physical_cpus": "64,66,68,70,72,74,76,78",
+    "effective_scalar_workers": 4,
+    "baseline_result_sha256": "6a63dc1082fec5d905d8d862b2221beefc17538cb0650a9e2d474fb30e0016bd",
+    "candidate_result_sha256": "72d4dd219caf8fa3c09fa176d883f6440668e1cbc2574b37ec50f8f9f0fdedeb"
+  }
+}
