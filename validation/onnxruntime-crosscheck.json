@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "oracle": "Original ONNX, ONNX Runtime CPUExecutionProvider",
+  "onnxruntime_version": "1.30.0",
+  "source_sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
+  "graph_sha256": "e6bbd590c14b2cb920fd2fbfba76c0cd44a7a7c3312223a358c1b6863cd139dd",
+  "batch": 7,
+  "independent_steps": [
+    0,
+    1,
+    2,
+    31,
+    32,
+    255,
+    8127
+  ],
+  "max_abs_error": {
+    "actions": 2.384185791015625e-06,
+    "memory": 1.9073486328125e-06,
+    "indices": 0.0,
+    "logits": 1.0913936421275139e-10
+  },
+  "device": "cuda:2"
+}
